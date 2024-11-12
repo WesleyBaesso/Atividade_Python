@@ -1,2 +1,8 @@
 pot = float(input("fale watts: "))
-dim = float(input("fale em m"))
+m = float(input("fale em m: "))
+c = float(input('fale em c: '))
+
+dim = m * c
+
+x = dim/pot
+print(x)
