@@ -1,13 +1,13 @@
-def fibonacci(N):
-    if N == 0:
-        return 0
-    elif N == 1:
-        return 1
+def mdc(x, y):
+    if y == 0:
+        return x
     else:
-        return fibonacci(N - 1) + fibonacci(N - 2)
+        return mdc(y, x % y)
+
 def main():
-    N = int(input("Digite um número inteiro positivo N para encontrar o N-ésimo termo da sequência Fibonacci: "))
-    resultado = fibonacci(N)
-    print(f"O {N}-ésimo termo da sequência Fibonacci é: {resultado}")
+    x = int(input("Digite o primeiro número (x): "))
+    y = int(input("Digite o segundo número (y): "))
+    resultado = mdc(x, y)
+    print(f"O MDC de {x} e {y} é: {resultado}")
 if __name__ == "__main__":
     main()
